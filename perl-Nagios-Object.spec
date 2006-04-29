@@ -47,6 +47,10 @@ czy nawet ca³e obiekty.
 rm -rf $RPM_BUILD_ROOT
 
 ./Build install
+install -d $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
+cp -a bin/* $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
+
+rm -f $RPM_BUILD_ROOT%{perl_vendorarch}/auto/.packlist
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -56,3 +60,4 @@ rm -rf $RPM_BUILD_ROOT
 %doc ChangeLog README
 %{perl_vendorlib}/Nagios
 %{_mandir}/man3/*
+%{_examplesdir}/*
