@@ -6,7 +6,7 @@
 %define		pdir	Nagios
 %define		pnam	Object
 Summary:	Nagios::Object - Perl objects to represent Nagios objects
-Summary(pl):	Nagios::Object - obiekty Perla reprezentuj±ce obiekty Nagiosa
+Summary(pl.UTF-8):   Nagios::Object - obiekty Perla reprezentujÄ…ce obiekty Nagiosa
 Name:		perl-Nagios-Object
 Version:	0.08
 Release:	1
@@ -26,11 +26,11 @@ any of the Nagios objects. All of the Perl classes are auto-generated
 at compile-time, so it's pretty trivial to add new attributes or even
 entire objects.
 
-%description -l pl
-Ten modu³ zawiera kod do tworzenia obiektów Perla reprezentuj±cych
-dowolne obiekty Nagiosa. Wszystkie klasy Perla s± generowane
-automatycznie w czasie kompilacji, wiêc ³atwo dodawaæ nowe atrybuty
-czy nawet ca³e obiekty.
+%description -l pl.UTF-8
+Ten moduÅ‚ zawiera kod do tworzenia obiektÃ³w Perla reprezentujÄ…cych
+dowolne obiekty Nagiosa. Wszystkie klasy Perla sÄ… generowane
+automatycznie w czasie kompilacji, wiÄ™c Å‚atwo dodawaÄ‡ nowe atrybuty
+czy nawet caÅ‚e obiekty.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
