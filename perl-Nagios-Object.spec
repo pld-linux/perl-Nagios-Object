@@ -6,7 +6,7 @@
 %define		pdir	Nagios
 %define		pnam	Object
 Summary:	Nagios::Object - Perl objects to represent Nagios objects
-Summary(pl.UTF-8):   Nagios::Object - obiekty Perla reprezentujące obiekty Nagiosa
+Summary(pl.UTF-8):	Nagios::Object - obiekty Perla reprezentujące obiekty Nagiosa
 Name:		perl-Nagios-Object
 Version:	0.08
 Release:	1
