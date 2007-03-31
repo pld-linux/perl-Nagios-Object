@@ -15,6 +15,7 @@ Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-authors/id/T/TO/TOBEYA/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	59cf6e6286abcd26674b4da092e4759b
 URL:		http://search.cpan.org/dist/Nagios-Object/
+BuildRequires:	perl-Module-Build
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 BuildArch:	noarch
