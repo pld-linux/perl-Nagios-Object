@@ -9,7 +9,7 @@ Summary:	Nagios::Object - Perl objects to represent Nagios objects
 Summary(pl.UTF-8):	Nagios::Object - obiekty Perla reprezentujące obiekty Nagiosa
 Name:		perl-Nagios-Object
 Version:	0.08
-Release:	1
+Release:	2
 License:	GPL
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-authors/id/T/TO/TOBEYA/%{pdir}-%{pnam}-%{version}.tar.gz
