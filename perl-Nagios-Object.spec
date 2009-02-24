@@ -8,16 +8,19 @@
 Summary:	Nagios::Object - Perl objects to represent Nagios objects
 Summary(pl.UTF-8):	Nagios::Object - obiekty Perla reprezentujące obiekty Nagiosa
 Name:		perl-Nagios-Object
-Version:	0.08
-Release:	2
+Version:	0.21.3
+Release:	1
 License:	GPL
 Group:		Development/Languages/Perl
-Source0:	http://www.cpan.org/modules/by-authors/id/T/TO/TOBEYA/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	59cf6e6286abcd26674b4da092e4759b
+Source0:	http://search.cpan.org/CPAN/authors/id/D/DU/DUNCS/Nagios-Object-%{version}.tar.gz
+# Source0-md5:	1b64bd73b045e9e111bc0755f0c692a0
 URL:		http://search.cpan.org/dist/Nagios-Object/
 BuildRequires:	perl-Module-Build
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
+%if %{with autodeps} || %{with tests}
+BuildRequires:	perl-Test-Exception
+%endif
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -49,8 +52,9 @@ rm -rf $RPM_BUILD_ROOT
 
 ./Build install
 install -d $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
-cp -a bin/* $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
+mv $RPM_BUILD_ROOT{%{_bindir}/*,%{_examplesdir}/%{name}-%{version}}
 
+rm -rf $RPM_BUILD_ROOT%{_mandir}/man1
 rm -f $RPM_BUILD_ROOT%{perl_vendorarch}/auto/.packlist
 
 %clean
@@ -61,4 +65,4 @@ rm -rf $RPM_BUILD_ROOT
 %doc ChangeLog README
 %{perl_vendorlib}/Nagios
 %{_mandir}/man3/*
-%{_examplesdir}/*
+%{_examplesdir}/%{name}-%{version}
