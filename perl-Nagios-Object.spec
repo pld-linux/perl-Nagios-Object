@@ -1,25 +1,26 @@
 #
 # Conditional build:
-%bcond_without	tests	# do not perform "make test"
+%bcond_without	tests		# do not perform "make test"
 #
 %include	/usr/lib/rpm/macros.perl
 %define		pdir	Nagios
 %define		pnam	Object
-Summary:	Nagios::Object - Perl objects to represent Nagios objects
+Summary:	Nagios::Object - Creates perl objects to represent Nagios objects
 Summary(pl.UTF-8):	Nagios::Object - obiekty Perla reprezentujące obiekty Nagiosa
 Name:		perl-Nagios-Object
-Version:	0.21.3
+Version:	0.21.6
 Release:	1
 License:	GPL
 Group:		Development/Languages/Perl
 Source0:	http://search.cpan.org/CPAN/authors/id/D/DU/DUNCS/Nagios-Object-%{version}.tar.gz
-# Source0-md5:	1b64bd73b045e9e111bc0755f0c692a0
+# Source0-md5:	f788e0a34a6c848072e4dd4d8990ae33
 URL:		http://search.cpan.org/dist/Nagios-Object/
 BuildRequires:	perl-Module-Build
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
-%if %{with autodeps} || %{with tests}
-BuildRequires:	perl-Test-Exception
+%if %{with tests}
+BuildRequires:	perl(Test::NoWarnings) >= 0.08
+BuildRequires:	perl-Test-Exception >= 0.01
 %endif
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
