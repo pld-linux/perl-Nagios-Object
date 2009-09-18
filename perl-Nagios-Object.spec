@@ -8,12 +8,12 @@
 Summary:	Nagios::Object - Creates perl objects to represent Nagios objects
 Summary(pl.UTF-8):	Nagios::Object - obiekty Perla reprezentujące obiekty Nagiosa
 Name:		perl-Nagios-Object
-Version:	0.21.6
+Version:	0.21.7
 Release:	1
 License:	GPL
 Group:		Development/Languages/Perl
 Source0:	http://search.cpan.org/CPAN/authors/id/D/DU/DUNCS/Nagios-Object-%{version}.tar.gz
-# Source0-md5:	f788e0a34a6c848072e4dd4d8990ae33
+# Source0-md5:	3ddba4ab18245fd2d09cbd93319b8999
 URL:		http://search.cpan.org/dist/Nagios-Object/
 BuildRequires:	perl-Module-Build
 BuildRequires:	perl-devel >= 1:5.8.0
