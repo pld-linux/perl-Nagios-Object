@@ -4,7 +4,6 @@
 
 %define		pdir	Nagios
 %define		pnam	Object
-%include	/usr/lib/rpm/macros.perl
 Summary:	Nagios::Object - Creates perl objects to represent Nagios objects
 Summary(pl.UTF-8):	Nagios::Object - obiekty Perla reprezentujące obiekty Nagiosa
 Name:		perl-Nagios-Object
